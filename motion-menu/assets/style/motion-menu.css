@@ -1,0 +1,42 @@
+.container{
+    position: relative;
+    width: 320px;
+    height: 100px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.box{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+#left-box{left: 0px;}
+#center-box{left: 110px;}
+#right-box{left: 220px;}
+
+
+#left:target ~ .container #left-box{
+    transform: scaleX(1.5);
+    z-index: 2;
+    background-color: blueviolet;
+}
+
+
+#right:target ~ .container #right-box{
+    transform: scaleX(1.5);
+    z-index: 2;
+    background-color: blueviolet;
+}
+
+
+#center:target ~ .container #center-box{
+    transform: scaleX(2);
+    z-index: 2;
+    background-color: blueviolet;
+}
+
